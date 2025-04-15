@@ -30,7 +30,6 @@ public class SpmDemo {
                     break;
                 case 5:
                     System.out.println("Mencari mahasiswa berdasarkan NIM...");
-                    // Logika pencarian berdasarkan NIM di sini
                     break;
                 case 0:
                     System.out.println("Keluar dari program.");
