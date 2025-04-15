@@ -19,7 +19,7 @@ public class Mahasiswa {
     }
 
     public static void tampilkanDaftarMahasiswa() {
-        System.out.println("Daftar Mahasiswa:");
+        System.out.println("\nDaftar Mahasiswa:");
         for (int i = 0; i < daftarMahasiswa.length; i++) {
             if (daftarMahasiswa[i] != null) {
                 System.out.println("NIM: " + daftarMahasiswa[i].getNim() + " | Nama: " + daftarMahasiswa[i].getNama() + " | Prodi: " + daftarMahasiswa[i].getProdi());
@@ -37,5 +37,14 @@ public class Mahasiswa {
         return prodi;
     }
 
+    public static Mahasiswa cariMahasiswa(String nim) {
+        for (int i = 0; i < daftarMahasiswa.length; i++) {
+            if (daftarMahasiswa[i] != null && daftarMahasiswa[i].getNim().equals(nim)) {
+                return daftarMahasiswa[i];
+            }
+        }
+        return null;
+    }
+    
      
 }
