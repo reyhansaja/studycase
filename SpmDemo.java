@@ -43,11 +43,11 @@ public class SpmDemo {
                     Penilaian.tampilkanDaftarPenilaian();
                     break;
                 case 4:
-                    System.out.println("Mengurutkan mahasiswa berdasarkan nilai akhir...");
+                    Penilaian.urutkanBerdasarkanNilaiAkhir();
                     break;
                 case 5:
                     System.out.print("Masukkan NIM Mahasiswa yang dicari: ");
-                    input.nextLine(); // Membersihkan newline
+                    input.nextLine(); 
                     String cariNIM = input.nextLine();
                     Mahasiswa mhs = Mahasiswa.cariMahasiswa(cariNIM);
                     if (mhs != null) {

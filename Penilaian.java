@@ -42,11 +42,18 @@ public class Penilaian {
                 }
             }
         }
+        System.out.println("\nPerhitungan Nilai Akhir:");
+        for (int i = 0; i < daftarPenilaian.length; i++) {
+            if (daftarPenilaian[i] != null) {
+                Mahasiswa mhs = daftarPenilaian[i].mahasiswa;
+                MataKuliah mk = daftarPenilaian[i].mataKuliah;
+                System.out.println(mhs.getNama() + " | " + mk.getNamaMK() + " | Nilai Akhir: " + daftarPenilaian[i].nilaiAkhir);
+            }
+        }
     }
 
     public static void tampilkanDaftarPenilaian() {
 
-        urutkanBerdasarkanNilaiAkhir();
 
         System.out.println("\nData Penilaian (Urut Berdasarkan Nilai Akhir):");
         System.out.println("NO | NIM | Nama Mahasiswa | Kode MK | Nama Mata Kuliah | Nilai Tugas | Nilai UTS | Nilai UAS | Nilai Akhir");
@@ -59,14 +66,7 @@ public class Penilaian {
             }
         }
 
-        System.out.println("\nPerhitungan Nilai Akhir:");
-        for (int i = 0; i < daftarPenilaian.length; i++) {
-            if (daftarPenilaian[i] != null) {
-                Mahasiswa mhs = daftarPenilaian[i].mahasiswa;
-                MataKuliah mk = daftarPenilaian[i].mataKuliah;
-                System.out.println(mhs.getNama() + " | " + mk.getNamaMK() + " | Nilai Akhir: " + daftarPenilaian[i].nilaiAkhir);
-            }
-        }
+        
     }
 
     public static void tampilkanPenilaianMahasiswa(String namaMahasiswa) {
